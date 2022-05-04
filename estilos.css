@@ -50,7 +50,11 @@ section{
   color: white;
   cursor: pointer;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-  transition: all 3s linear;
+  transition: all .3s linear;
+}
+
+.btn:hover{
+  transform: scale(1.1);
 }
 
 header{
@@ -144,6 +148,14 @@ header label{
   }
 }
 
+@media(max-width:990px){
+  section{
+    padding: 0 3%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+  }
+}
+
 @media(max-width:785px){
   header label{
     visibility: visible;
@@ -162,6 +174,7 @@ header label{
     transform-origin: top;
     transform: scaleY(0);
     opacity: 0;
+    transition: .2s linear;
   }
 
   header .navbar a{
@@ -177,6 +190,22 @@ header label{
 
   header input:checked ~ label::before{
     content: '\f00d';
+  }
+
+  .inicio{
+    flex-flow: column-reverse;
+  }
+
+  .inicio .image img{
+    width: 100%;
+  }
+
+  .inicio .content h3{
+    font-size: 3.6rem;
+  }
+
+  .inicio .content p{
+    font-size: 1.5rem;
   }
 }
 
